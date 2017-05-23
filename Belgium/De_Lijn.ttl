@@ -1,0 +1,58 @@
+@base <http://www.delijn.be/metadata>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <http://schema.org/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+
+<#catalog-01> a dcat:Catalog ;	
+	dcat:dataset <#agency>, <#calendar_dates>, <#routes>, <#stops>, <#stop_times>, <#trips> ;
+	dct:description "Data set for the De Lijn bus transportation system" ;
+	dct:publisher <#agent-01> ;
+	dct:title "De Lijn Bus System" ;
+	dct:spatial <http://sws.geonames.org/3337388/>;
+	foaf:homepage <https://www.delijn.be>  
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:license <http://www.delijn.be/license> ; #Where is actual license?
+	dct:issued "2011-12-05"^^xsd:date ; #Issue date for this DCAT file?
+	dcat:themeTaxonomy <http://www.delijn.be/kos/vocabmetadata> ;
+	dct:modified "2016-12-05"^^xsd:date ; #Modification date for this DCAT file?
+	dcat:record <#catalogRecord-01> ;
+	dct:rights "public".
+
+
+<#agency> a dcat:Dataset;
+	dct:description "Company information and contact details";
+	dct:title "Agency Contact Data" ;
+	dct:spatial <http://sws.geonames.org/3337388/>; 
+	dcat:keyword "Bus";
+	dcat:keyword "AdminUnitLevel3 (Province): Madrid, Spain"; 	#What is this and why mandatory?
+	dcat:contactPoint <http://www.delijn.be/en/contact/>;
+	dcat:distribution <#distribution-01> ;
+	dcat:theme <http://www.delijn.be/kos/vocabmetadata/interurbanbus> ;	#This reference a SKOS file, should we build one?
+	dct:publisher <#agent-01> ;
+	dct:conformsTo "GTFS" ;
+	foaf:page <http://www.delijn.be> ;
+	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
+	dct:hasVersion <#agency01> ;
+	dct:identifier "Agency" ;
+	dcat:landingPage <https://services5.arcgis.com/UxADft6QPcvFyDU1/arcgis/rest/services/M8_Red/FeatureServer/0>;	#Do not know where to get this
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	adms:identifier	"19884a02ac044270b91fa478d80f7858_0" ;	#Not sure what is is
+	dct:relation <http://data-crtm.opendata.arcgis.com/datasets?q=M8+red&sort_by=relevance> ;	#Relation with what?
+	dct:issued "2015-01-01"^^xsd:date ;	#How do I know when the dataset was issued?
+	adms:sample	<#distribution-01> ;
+	dct:source <#dataset-05> ;	#Source?
+	dct:temporal <#periodOfTime-01> ;	#optional
+	dct:modified "2015-12-05"^^xsd:date ;	#How do I know when the dataset was modified?
+	owl:versionInfo	"1.0" ;
+	adms:versionNotes "final version for 2016"; #Same as for modified
+	dct:accessRights "public" ;
+	dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series> ;
+	dct:provenance "This dataset belongs to the open data about De Lijn bus system".

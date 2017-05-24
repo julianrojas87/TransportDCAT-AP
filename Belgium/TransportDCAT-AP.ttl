@@ -28,7 +28,7 @@
 
 
 <#iRail> a foaf:Organization ;
-	foaf:name "iRail - Promoting digital creativity concerning mobility in Belgium"
+	foaf:name "iRail - Promoting digital creativity concerning mobility in Belgium";
 	foaf:page <https://irail.be/#org>.
 
 

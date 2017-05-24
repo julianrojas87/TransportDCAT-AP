@@ -13,11 +13,11 @@
 
 <#catalog-01> a dcat:Catalog ;	
 	dcat:dataset <#delijn>, <#stib-mivb>, <#snbc-nmbs>, <#tec> ;
-	dct:description "iRail catalog for GTFS" ;
-	dct:publisher <#iRail> ;
-	dct:title "De Lijn Bus System" ;
-	dct:spatial <http://sws.geonames.org/3337388/>;
-	foaf:homepage <https://www.delijn.be> ;  
+	dct:description "Contains 4 data set comprising different transportation systems in Belgium" ;
+	dct:publisher <https://irail.be/#org> ;
+	dct:title "iRail catalog for GTFS" ;
+	dct:spatial <http://sws.geonames.org/2802361/>;
+	foaf:homepage <https://hello.irail.be> ;  
 	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
 	dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
 	dct:issued "2017-05-24"^^xsd:date ;
@@ -27,14 +27,14 @@
 	dct:rights "public".
 
 
-<#iRail> a foaf:Organization ;
+<https://irail.be/#org> a foaf:Organization ;
 	foaf:name "iRail - Promoting digital creativity concerning mobility in Belgium";
-	foaf:page <https://irail.be/#org>.
+	foaf:page <https://hello.irail.be>.
 
 
 <#delijn> a dcat:Dataset;
 	dct:description "Flanders De Lijn bus information system";
-	dct:title "De Lijn Bus system" ;
+	dct:title "De Lijn Bus System" ;
 	dct:spatial <http://sws.geonames.org/3337388/>; 
 	dcat:keyword "Bus";
 	dcat:keyword "Stops";
@@ -42,7 +42,7 @@
 	dcat:distribution <#delijn-distribution-01> ;
 	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/interurbanbus> ;
 	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
-	dct:publisher <#iRail> ;
+	dct:publisher <https://irail.be/#org> ;
 	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
 	foaf:page <http://www.delijn.be> ;
 	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
@@ -58,7 +58,7 @@
 
 <#stib-mivb> a dcat:Dataset;
 	dct:description "Brussels stib-mivb bus information system";
-	dct:title "De Lijn Bus system" ;
+	dct:title "MIVB/STIB public transportation agency" ;
 	dct:spatial <http://sws.geonames.org/2800866/>; 
 	dcat:keyword "Bus";
 	dcat:keyword "Stops";
@@ -66,7 +66,7 @@
 	dcat:distribution <#stib-mivb-distribution-01> ;
 	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/interurbanbus> ;
 	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
-	dct:publisher <#iRail> ;
+	dct:publisher <https://irail.be/#org> ;
 	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
 	foaf:page <http://www.stib-mivb.be> ;
 	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
@@ -90,7 +90,7 @@
 	dcat:distribution <#stib-mivb-distribution-01> ;
 	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/train> ;
 	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
-	dct:publisher <#iRail> ;
+	dct:publisher <https://irail.be/#org> ;
 	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
 	foaf:page <http://www.belgianrail.be> ;
 	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
@@ -114,7 +114,7 @@
 	dcat:distribution <#tec-distribution-01> ;
 	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/interurbanbus> ;
 	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
-	dct:publisher <#iRail> ;
+	dct:publisher <https://irail.be/#org> ;
 	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
 	foaf:page <https://www.infotec.be/> ;
 	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;

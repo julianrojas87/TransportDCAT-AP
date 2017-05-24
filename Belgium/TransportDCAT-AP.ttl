@@ -17,7 +17,7 @@
 	dct:publisher <#iRail> ;
 	dct:title "De Lijn Bus System" ;
 	dct:spatial <http://sws.geonames.org/3337388/>;
-	foaf:homepage <https://www.delijn.be>  
+	foaf:homepage <https://www.delijn.be> ;  
 	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
 	dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
 	dct:issued "2017-05-24"^^xsd:date ;

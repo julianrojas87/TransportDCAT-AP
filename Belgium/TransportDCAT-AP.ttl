@@ -1,0 +1,199 @@
+@base <https://gtfs.irail.be/metadata>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix schema: <http://schema.org/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+
+<#catalog-01> a dcat:Catalog ;	
+	dcat:dataset <#delijn>, <#stib-mivb>, <#snbc-nmbs>, <#tec> ;
+	dct:description "iRail catalog for GTFS" ;
+	dct:publisher <#iRail> ;
+	dct:title "De Lijn Bus System" ;
+	dct:spatial <http://sws.geonames.org/3337388/>;
+	foaf:homepage <https://www.delijn.be>  
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+	dct:issued "2017-05-24"^^xsd:date ;
+	dcat:themeTaxonomy <http://datos.crtm.es/kos/vocabmetadata> ;
+	dct:modified "2017-05-24"^^xsd:date ;
+	dcat:record <#catalogRecord-01> ;
+	dct:rights "public".
+
+
+<#iRail> a foaf:Organization ;
+	foaf:name "iRail - Promoting digital creativity concerning mobility in Belgium"
+	foaf:page <https://irail.be/#org>.
+
+
+<#delijn> a dcat:Dataset;
+	dct:description "Flanders De Lijn bus information system";
+	dct:title "De Lijn Bus system" ;
+	dct:spatial <http://sws.geonames.org/3337388/>; 
+	dcat:keyword "Bus";
+	dcat:keyword "Stops";
+	dcat:contactPoint <http://www.delijn.be/en/contact/>;
+	dcat:distribution <#delijn-distribution-01> ;
+	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/interurbanbus> ;
+	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
+	dct:publisher <#iRail> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
+	foaf:page <http://www.delijn.be> ;
+	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
+	dct:hasVersion <#delijn01> ;
+	dct:identifier "delijn" ;
+	dcat:landingPage <https://www.delijn.be/en/zakelijk-aanbod/reisinfodata/gebruik-onze-data.html>;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	owl:versionInfo	"1.0" ;
+	dct:accessRights "public" ;
+	dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series> ;
+	dct:provenance "This dataset belongs to the open data about Belgium transportation system".
+
+
+<#stib-mivb> a dcat:Dataset;
+	dct:description "Brussels stib-mivb bus information system";
+	dct:title "De Lijn Bus system" ;
+	dct:spatial <http://sws.geonames.org/2800866/>; 
+	dcat:keyword "Bus";
+	dcat:keyword "Stops";
+	dcat:contactPoint <http://www.stib-mivb.be/article.html?_guid=803bdcc5-1b8e-3410-54a9-bf3b6e04a84c&l=en>;
+	dcat:distribution <#stib-mivb-distribution-01> ;
+	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/interurbanbus> ;
+	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
+	dct:publisher <#iRail> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
+	foaf:page <http://www.stib-mivb.be> ;
+	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
+	dct:hasVersion <#stib-mivb01> ;
+	dct:identifier "stib-mivb" ;
+	dcat:landingPage <https://opendata.stib-mivb.be/store>;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	owl:versionInfo	"1.0" ;
+	dct:accessRights "public" ;
+	dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series> ;
+	dct:provenance "This dataset belongs to the open data about Belgium transportation system".
+
+
+<#sncb-nmbs> a dcat:Dataset;
+	dct:description "Belgium sncb-nmbs train information system";
+	dct:title "De Lijn Bus system" ;
+	dct:spatial <http://sws.geonames.org/2802361/>; 
+	dcat:keyword "Train";
+	dcat:keyword "Stops";
+	dcat:contactPoint <http://www.belgianrail.be/en/customer-service/contact.aspx>;
+	dcat:distribution <#stib-mivb-distribution-01> ;
+	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/train> ;
+	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
+	dct:publisher <#iRail> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
+	foaf:page <http://www.belgianrail.be> ;
+	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
+	dct:hasVersion <#sncb-nmbs01> ;
+	dct:identifier "sncb-nmbs" ;
+	dcat:landingPage <http://www.belgianrail.be/en/customer-service/information-services-and-travel-tools/public-data.aspx>;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	owl:versionInfo	"1.0" ;
+	dct:accessRights "public" ;
+	dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series> ;
+	dct:provenance "This dataset belongs to the open data about Belgium transportation system".
+
+
+<#tec> a dcat:Dataset;
+	dct:description "Walloonia bus information system";
+	dct:title "De Lijn Bus system" ;
+	dct:spatial <http://sws.geonames.org/3337387/>; 
+	dcat:keyword "Bus";
+	dcat:keyword "Stops";
+	dcat:contactPoint <https://www.infotec.be/en-us/contactus.aspx>;
+	dcat:distribution <#tec-distribution-01> ;
+	dcat:theme <http://datos.crtm.es/kos/vocabmetadata/interurbanbus> ;
+	dcat:theme <http//:datos.crtm.es/kos/vocabmetadata/stops> ;
+	dct:publisher <#iRail> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ;
+	foaf:page <https://www.infotec.be/> ;
+	dct:accrualPeriodicity <http://purl.org/cld/freq/weekly> ;
+	dct:hasVersion <#tec01> ;
+	dct:identifier "tec" ;
+	dcat:landingPage <hhttps://www.infotec.be/en-us/keepinformed.aspx>;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	owl:versionInfo	"1.0" ;
+	dct:accessRights "public" ;
+	dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series> ;
+	dct:provenance "This dataset belongs to the open data about Belgium transportation system".
+
+
+<#delijn-distribution-01> a dcat:Distribution;
+	dcat:accessURL <https://hello.irail.be/gtfs/> ;
+	dct:description	"Data set distribution for the De Lijn bus information system" ;
+	dct:format "CSV" ;
+	dcat:byteSize 37102494  ;
+	foaf:page <https://hello.irail.be/gtfs/> ;
+	dcat:downloadURL <http://gtfs.irail.be/de-lijn/de_lijn-gtfs.zip> ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ; 
+	dcat:mediaType "text/csv" ;
+	dct:rights "public" ; 
+	adms:status "updated" ;
+	dct:title "De Lijn Bus Information System".
+	
+
+<#stib-mivb-distribution-01> a dcat:Distribution;
+	dcat:accessURL <https://hello.irail.be/gtfs/> ;
+	dct:description	"Data set distribution for the Brussels SITB-MIVB bus information system" ;
+	dct:format "CSV" ;
+	dcat:byteSize 27661685  ;
+	foaf:page <https://hello.irail.be/gtfs/> ;
+	dcat:downloadURL <https://gtfs.irail.be/mivb/mivb-gtfs.zip> ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ; 
+	dcat:mediaType "text/csv" ;
+	dct:rights "public" ; 
+	adms:status "updated" ;
+	dct:title "Brussels SITB-MIVB Bus Information System". 
+
+
+<#snbc-nmbs-distribution-01> a dcat:Distribution;
+	dcat:accessURL <https://hello.irail.be/gtfs/> ;
+	dct:description	"Data set distribution for the Belgium SNBC-NMBS train information system" ;
+	dct:format "CSV" ;
+	dcat:byteSize 2122369  ;
+	foaf:page <https://hello.irail.be/gtfs/> ;
+	dcat:downloadURL <http://gtfs.irail.be/nmbs/nmbs-latest.zip> ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ; 
+	dcat:mediaType "text/csv" ;
+	dct:rights "public" ; 
+	adms:status "updated" ;
+	dct:title "Belgium SNBC-NMBS Train Information System".
+
+
+<#tec-distribution-01> a dcat:Distribution;
+	dcat:accessURL <https://hello.irail.be/gtfs/> ;
+	dct:description	"Data set distribution for the Wallonia TEC bus information system" ;
+	dct:format "CSV" ;
+	dcat:byteSize 36479515  ;
+	foaf:page <https://hello.irail.be/gtfs/> ;
+	dcat:downloadURL <https://gtfs.irail.be/tec/tec-gtfs.zip> ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:conformsTo <https://developers.google.com/transit/gtfs/reference> ; 
+	dcat:mediaType "text/csv" ;
+	dct:rights "public" ; 
+	adms:status "updated" ;
+	dct:title "Wallonia TEC Bus Information System". 
+
+
+<#catalogRecord-01> a dcat:CatalogRecord;
+	foaf:primaryTopic <#delijn>, <#stib-mivb>, <#snbc-nmbs>, <#tec>;
+	dct:modified "2017-05-24"^^xsd:date ;
+	dct:conformsTo "TransportDCAT-AP";
+	adms:status	"updated";
+	dct:issued "2017-05-24"^^xsd:date ;
+	dct:description	"Added iRail data sets to the catalog" ;
+	dct:language <http://id.loc.gov/vocabulary/iso639-1/en> ;
+	dct:title "Belgium Data sets - Inclusion".
